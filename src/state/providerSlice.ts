@@ -4,7 +4,7 @@ import * as React from 'react';
 const initialState = {
     providers: [
        {
-            id : 1,
+            id : "1",
             name : "Maria",
             dni : "1075310153",
             phone : "3173028713"

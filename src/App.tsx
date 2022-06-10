@@ -10,20 +10,10 @@ import NewProvider from './pages/NewProvider'
 import ProviderBill from './pages/ProviderBill'
 import Store from './state/Store'
 import './App.css'
+import {productType, providerType} from './types'
 
-type providerType = {
-  id?: String,
-  name: String,
-  dni: String,
-  phone: String
-}
 
-type productType = {
-  id: number,
-  name: String,
-  dni: String,
-  phone: String
-}
+
 function App() {
   
   
@@ -51,4 +41,4 @@ function App() {
 }
 
 export default App
-export type {providerType}
+export type {providerType, productType}

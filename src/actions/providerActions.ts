@@ -1,6 +1,5 @@
 import { providerType } from "../App"
 
-const ENDPOINT = 'http://localhost:8080/api/todos'
 
 const HEADERS = {
   Accept: 'application/json',
@@ -24,3 +23,4 @@ export const saveProvider = async (provider: providerType) => {
   const data = await response.json() as providerType
   return data
 }
+

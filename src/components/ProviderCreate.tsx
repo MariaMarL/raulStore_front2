@@ -7,7 +7,7 @@ import { saveProvider } from "../actions/providerActions";
 
 const Form = () => {
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch() //para dispatchar un metodo
 
     const [name, setName] = useState('')
     const [dni, SetDni] = useState('')
