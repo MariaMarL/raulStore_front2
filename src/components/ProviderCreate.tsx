@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProvidersInReducer } from "../state/providerSlice";
 import '../App.css'
+import { saveProvider } from "../actions/providerActions";
 
 
 const Form = () => {
@@ -12,27 +13,32 @@ const Form = () => {
     const [dni, SetDni] = useState('')
     const [phone, SetPhone] = useState('')
 
-    const addProvider = (e) => {
+   
+
+    const addProvider = async (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if(name&&dni&&phone){
             const providerToAdd = {
-                id: Math.floor(Math.random() * 1000),
                 name,
                 dni,
                 phone
             }
             
-            dispatch(addProvidersInReducer(providerToAdd))
+            const provider = await saveProvider(providerToAdd)
+
+            dispatch(addProvidersInReducer(provider))
         
             setName('')
             SetDni('')
             SetPhone('')
         }
-    }
+   
+   
+      }
 
   return (
       <div>
-          <form>
+          <form onSubmit={(e)=>addProvider(e)}>
               <input 
                 type="text" 
                 placeholder="name"
@@ -51,7 +57,7 @@ const Form = () => {
                 onChange={(e)=> SetPhone(e.target.value)}
                 value={phone}
               />
-              <button onClick={addProvider}>add Provider</button>
+              <button>add Provider</button>
           </form>
       </div>
   );

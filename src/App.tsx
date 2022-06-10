@@ -12,6 +12,13 @@ import Store from './state/Store'
 import './App.css'
 
 type providerType = {
+  id?: String,
+  name: String,
+  dni: String,
+  phone: String
+}
+
+type productType = {
   id: number,
   name: String,
   dni: String,
@@ -19,9 +26,7 @@ type providerType = {
 }
 function App() {
   
-  const [count, setCount] = useState(0)
-
-
+  
   return (
     <BrowserRouter>
       <nav className="navbar">
