@@ -7,9 +7,18 @@ interface IProductProps {
 
 const Product: React.FunctionComponent<IProductProps> = ({product}) => {
   return (
-    <div>
-        <h1>{product.id} {product.name} {product.description} {product.maxUnits} {product.minUnits} {product.unitsLeft} {product.price} {product.providerName} </h1>
-    </div>
+
+    <tr>
+      <td>{product.id} </td>
+      <td>{product.name}  </td>
+      <td>{product.description}  </td>
+      <td>{product.unitsLeft}  </td>
+      <td>{product.maxUnits}  </td>
+      <td>{product.minUnits}  </td>
+      <td>{product.price}  </td>
+      <td>{product.providerName}  </td>
+    </tr>
+
   )
 };
 

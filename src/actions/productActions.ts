@@ -12,7 +12,7 @@ export const getAllProducts = async ()=>{
     return data
 }
 
-export const saveProvider = async (product: productType) => {
+export const saveProduct = async (product: productType) => {
     const response = await fetch(`http://localhost:8080/api/product/create`, { method: 'POST', body: JSON.stringify(product), headers: HEADERS})
     const data = await response.json() as productType
     return data

@@ -11,12 +11,34 @@ const ProductList = () => {
  
  
     return (
-        <div className='getList'>
-            <h1> Products</h1>
-            {products.map((product) => <Product key={product.id} product ={product} />)}
+        <table className='table getList'>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>UnitsLeft</th>
+            <th>MaxUnit</th>
+            <th>MinUnit</th>
+            <th>Price</th>
+            <th>ProviderName</th>
+          
+        </tr>
+        {
+          products.map((product) => 
+          <> <Product key={product.id} product ={product}  /> <td><button className="delete">Delete</button></td></>  )
+          
+        }
+          
+        
+        
+  
+  
+    </table>
 
-        </div>
+
     )
 };
 
 export default ProductList;
+
+

@@ -19,6 +19,7 @@ const MyProducts = () => {
   
     return (
       <div className='main_content'>
+        <h1>MY PRODUCTS</h1>
         <ProductList/>
       </div>
     )

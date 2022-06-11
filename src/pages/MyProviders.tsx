@@ -20,6 +20,7 @@ const MyProviders = () => {
   
   return (
     <div className='main_content'>
+      <h1>MY PROVIDERS</h1>
         <ProviderList />
     </div>
   )

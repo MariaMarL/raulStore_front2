@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css'
+import ProductForm from '../components/ProductForm'
 
 const NewProduct = () => {
 
@@ -8,7 +9,8 @@ const NewProduct = () => {
 
     
     <div className='main_content'>
-      <h1>NewProduct</h1>
+      <h1>New Product</h1>
+      <ProductForm/>
     </div>
   )
 }
