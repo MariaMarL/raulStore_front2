@@ -20,6 +20,7 @@ export const saveProduct = async (product: productType) => {
 
 export const deleteProduct = async (id:String) => {
   const response = await fetch(`http://localhost:8080/api/product/delete/${id}`, { method: 'DELETE', headers: HEADERS})
-  const data = await response.json() as productType
-  return data
+  console.log(response);
+  
+  return {isDeleted:response.ok, productId:id}
 }

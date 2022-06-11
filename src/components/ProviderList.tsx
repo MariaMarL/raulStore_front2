@@ -11,6 +11,7 @@ const ProviderList = () => {
 
     
 const providers = useSelector((state:stateTypeRedux) => state.providerState.providers)
+
     
 return (
 
@@ -25,7 +26,7 @@ return (
       </tr>
       {
         providers.map((provider) => 
-        <> <Provider key={provider.id} provider = {provider}  /> <td><button className="delete">Delete</button></td></>  )
+        <> <Provider key={provider.id} provider = {provider}  /> </>  )
         
       }
         

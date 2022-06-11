@@ -9,7 +9,7 @@ const NewProduct = () => {
 
     
     <div className='main_content'>
-      <h1>New Product</h1>
+      <h1>ADD NEW PRODUCT</h1>
       <ProductForm/>
     </div>
   )

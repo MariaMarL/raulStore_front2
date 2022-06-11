@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState } from "react";
 import { useDispatch } from 'react-redux';
 import '../App.css'
+import '../table.css'
 import {saveProduct} from '../actions/productActions'
 import { addProductInReducer } from '../state/productSlice';
 
@@ -59,7 +60,7 @@ const ProductForm = () => {
         <input type="number" placeholder='price' onChange={(e)=>setPrice(e.target.valueAsNumber)} value={price} />
         <input type="text" placeholder='providerName' onChange={(e)=>setProviderName(e.target.value)} value={providerName} />
         
-        <button> add Product</button>
+        <button className="delete"> add Product</button>
       </form>
     </div>
   )
